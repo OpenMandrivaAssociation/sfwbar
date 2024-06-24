@@ -42,7 +42,14 @@ placement functionality require sway (or at least i3 IPC support).
 %autosetup -p1 -n %{name}-%{tarball_version}
 
 %build
-%meson
+%meson  \
+        -Dnetwork=enabled \
+        -Dalsa=enabled \
+        -Dbluez=enabled \
+        -Dnm=enabled \
+        -Dpulse=enabled \
+        -Dmpd=enabled \
+        -Dxkb=enabled
 %meson_build
 
 %install
