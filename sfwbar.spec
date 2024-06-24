@@ -2,7 +2,7 @@
 
 Name:           sfwbar
 Version:        1.0~beta15
-Release:        %autorelease
+Release:        1
 Summary:        S* Floating Window Bar
 
 # Icons are from yr.no and are licensed under MIT license
@@ -10,10 +10,9 @@ License:        GPL-3.0-only AND MIT
 URL:            https://github.com/LBCrion/sfwbar
 Source0:        %{url}/archive/v%{tarball_version}/%{name}-%{tarball_version}.tar.gz
 
-BuildRequires:  gcc
 BuildRequires:  make
 BuildRequires:  meson
-BuildRequires:  python3-docutils
+BuildRequires:  python-docutils
 BuildRequires:  pkgconfig(alsa)
 BuildRequires:  pkgconfig(gio-2.0)
 BuildRequires:  pkgconfig(gio-unix-2.0)
@@ -52,13 +51,8 @@ placement functionality require sway (or at least i3 IPC support).
 %files
 %doc README.md doc/ChangeLog
 %license LICENSE
-# Icons license file:
-# %%{_datadir}/%%{name}/icons/weather/LICENSE
 %{_bindir}/%{name}
 %{_datadir}/%{name}/
 %{_datadir}/icons/hicolor/scalable/*/*.svg
 %{_libdir}/%{name}/
 %{_mandir}/man1/*.1*
-
-%changelog
-%autochangelog
