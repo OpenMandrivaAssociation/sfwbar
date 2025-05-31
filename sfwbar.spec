@@ -1,8 +1,10 @@
+%define _disable_lto 1
+
 %global tarball_version %%(echo %{version} | tr '~' '_')
 
 Name:           sfwbar
 Version:        1.0~beta16.1
-Release:        2
+Release:        3
 Summary:        S* Floating Window Bar
 
 # Icons are from yr.no and are licensed under MIT license
@@ -42,8 +44,8 @@ placement functionality require sway (or at least i3 IPC support).
 %autosetup -p1 -n %{name}-%{tarball_version}
 
 %build
-export CC=gcc
-export CXX=g++
+#export CC=gcc
+#export CXX=g++
 %meson  \
         -Dnetwork=enabled \
         -Dalsa=enabled \
