@@ -1,8 +1,8 @@
 %global tarball_version %%(echo %{version} | tr '~' '_')
 
 Name:           sfwbar
-Version:        1.0~beta16.1
-Release:        2
+Version:        1.0~beta17
+Release:        1
 Summary:        S* Floating Window Bar
 
 # Icons are from yr.no and are licensed under MIT license
